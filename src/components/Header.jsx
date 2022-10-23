@@ -1,11 +1,11 @@
-const { Component } = require("react");
+const { Component } = require('react');
 
 class Header extends Component {
-    render() {
-        return (
-            <h1>Sistema solar</h1>
-        );
-    }
+  render() {
+    return (
+      <h1>Sistema solar</h1>
+    );
+  }
 }
 
 export default Header;
