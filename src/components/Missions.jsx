@@ -1,14 +1,35 @@
-import { Component } from "react";
-import Title from "./Title";
+import { Component } from 'react';
+import PropTypes from "prop-types";
+import Title from './Title';
+import MissionsCard from './MissionsCard';
 
 class Missions extends Component {
-  render () {
+  render() {
+    const { missionsinfo } = this.props;
     return (
       <div data-testid="missions">
-        <Title headline= 'missoes'/>
+        <Title headline="missoes" />
+        {Missions.map((missoes) => (
+          <MissionsCard
+            key={ missoes.name }
+            missionsName={ missoes.name }
+            missionsYear={ missoes.year }
+            missionsCountry={ missoes.country }
+            missionsDestination={ missoes.destination }
+          />
+        ))}
       </div>
-    )
+    );
   }
 }
 
-expect default Missions;
+Missions.propTypes = {
+  missionsinfo: PropTypes.shape(propTypes.arrayOf({
+    name: PropTypes.sring.isRequired,
+    year: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    destination: PropTypes.string.isRequired,
+  })).isRequired,
+};
+
+export default Missions;
