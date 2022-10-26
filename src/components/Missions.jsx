@@ -1,15 +1,15 @@
 import { Component } from 'react';
-import PropTypes from 'prop-types';
+/* import PropTypes from 'prop-types'; */
 import Title from './Title';
-import MissionsCard from './MissionsCard';
-
+/* import MissionsCard from './MissionsCard';
+ */
 class Missions extends Component {
   render() {
-    const { missionsinfo } = this.props;
+    /* const { missionsinfo } = this.props; */
     return (
       <div data-testid="missions">
-        <Title headline="missoes" />
-        {missionsinfo.map((missoes) => (
+        <Title headline="Missões" />
+        {/* {missionsinfo.map((missoes) => (
           <MissionsCard
             key={ missoes.name }
             missionsName={ missoes.name }
@@ -17,19 +17,19 @@ class Missions extends Component {
             missionsCountry={ missoes.country }
             missionsDestination={ missoes.destination }
           />
-        ))}
+        ))} */}
       </div>
     );
   }
 }
 
-Missions.propTypes = {
+/* Missions.propTypes = {
   missionsinfo: PropTypes.shape(PropTypes.arrayOf({
     name: PropTypes.string.isRequired,
     year: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
     destination: PropTypes.string.isRequired,
   })).isRequired,
-};
+}; */
 
 export default Missions;
