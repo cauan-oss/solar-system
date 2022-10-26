@@ -3,7 +3,11 @@ const { Component } = require('react');
 class Header extends Component {
   render() {
     return (
-      <h1>Sistema solar</h1>
+      <h1>
+        <header>
+          Sistema solar
+        </header>
+      </h1>
     );
   }
 }

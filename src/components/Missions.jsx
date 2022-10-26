@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import Title from './Title';
 import MissionsCard from './MissionsCard';
 
@@ -9,7 +9,7 @@ class Missions extends Component {
     return (
       <div data-testid="missions">
         <Title headline="missoes" />
-        {Missions.map((missoes) => (
+        {missionsinfo.map((missoes) => (
           <MissionsCard
             key={ missoes.name }
             missionsName={ missoes.name }
@@ -24,8 +24,8 @@ class Missions extends Component {
 }
 
 Missions.propTypes = {
-  missionsinfo: PropTypes.shape(propTypes.arrayOf({
-    name: PropTypes.sring.isRequired,
+  missionsinfo: PropTypes.shape(PropTypes.arrayOf({
+    name: PropTypes.string.isRequired,
     year: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
     destination: PropTypes.string.isRequired,
